@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="lesson">
+        <h1 *ngIf="canShow">Aparece ou não aparece Boolean</h1>
+        <h1 *ngIf="myName === 'Victor'; else myNameisnot">Meu nome é Victor</h1>
+        <ng-template #myNameisnot><h1>Meu nome não é Victor</h1></ng-template>
+    </div>
+</div>
