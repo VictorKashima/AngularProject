@@ -8,15 +8,26 @@ import { Component } from '@angular/core';
 export class EventsComponent {
 
   showBoolean: boolean = false;
-  buttonText: string = 'Mostar';
+  buttonText: string = 'Mostrar';
+  array2 = ['Mostrar', 'Não Mostrar'];
+  booleanRandom: boolean = false;
+  h1Text: string = 'JA VOLTO';
+  buttonText2: string = 'VOLTEI';
+  array = ['JA VOLTO', 'VOLTEI'];
 
   showMessage(): void {
     this.showBoolean = !this.showBoolean;
-    if (this.showBoolean === false) {
-      this.buttonText = 'Mostrar';
-    } else {
-      this.buttonText = 'Não mostrar';
-    }
+    this.buttonText = this.array2[Number(!this.showBoolean)];
+    this.buttonText = this.array2[Number(this.showBoolean)];
+
   }
+
+  toggleReturn(): void {
+    this.booleanRandom = !this.booleanRandom;
+    this.h1Text = this.array[Number(this.booleanRandom)];
+    this.buttonText2 = this.array[(Number(!this.booleanRandom))];
+    
+  }
+
 
 }

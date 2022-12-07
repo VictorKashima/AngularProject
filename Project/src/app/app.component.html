@@ -1,12 +1,13 @@
 <h1>Hello World! Help me for learn Angular</h1>
 <h2>H2 do app</h2>
 
-<app-first-component></app-first-component>
+<button (click)="showFunction()">{{ buttonText }}</button>
+<app-first-component *ngIf="showComponents"></app-first-component>
 
-<app-parent-data [name]="userName" [data]="userInfo"></app-parent-data>
+<app-parent-data [name]="userName" [data]="userInfo" *ngIf="showComponents"></app-parent-data>
 
-<app-directives></app-directives>
+<app-directives *ngIf="showComponents"></app-directives>
 
-<app-if-render></app-if-render>
+<app-if-render *ngIf="showComponents"></app-if-render>
 
 <app-events></app-events>

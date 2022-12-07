@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  showComponents: boolean = false;
+  buttonText: string = 'Mostar';
+  array = ['Esconder', 'Mostrar'];
+
+  showFunction(): void {
+    this.showComponents = !this.showComponents;
+    this.buttonText = this.array[Number(this.showComponents)];
+    this.buttonText = this.array[Number(!this.showComponents)];
+
+  }
+  
+
   userName = 'Victor';
   userInfo = {
     email: "victorkashima04@gmail.com",

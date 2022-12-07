@@ -1,0 +1,18 @@
+h1 {
+    font-size: 200px;
+    text-transform: uppercase;  
+    text-align: center;
+}
+
+.lesson {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+button {
+    font-size: 16px;
+    margin: 0 auto;
+    padding: .5em;
+}
