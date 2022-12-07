@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="lesson">
+        <h1>Two way funcionando</h1>
+        <form>
+            <input type="text" [(ngModel)]="name"
+            name="name"
+            placeholder="Digite seu nome" />
+            <input type="submit" value="send" (click)="showName()" />
+        </form>
+        <p *ngIf="toggleShow">Nome: {{ name }}</p>
+    </div>
+</div>

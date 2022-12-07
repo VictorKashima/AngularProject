@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="lesson">
+        <h1>Deu certo List-Render</h1>
+        <h3>Meus animais</h3>
+        <ul>
+            <li *ngFor="let animal of animals">
+                Nome: {{ animal.name }} - Tipo: {{ animal.type}}
+                <button (click)="showAge(animal)">Idade</button>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                {{ animalSentence }}
+            </li>
+        </ul>
+    </div>
+</div>
